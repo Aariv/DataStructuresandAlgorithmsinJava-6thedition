@@ -21,10 +21,10 @@ public class ScoreBoard {
 	 */
 	public void add(GameEntry e) {
 		int newScore = e.getScore();
-
+		int n = board.length;
 		// is new entry high score
-		if (numEntries < board.length || newScore > board[numEntries - 1].getScore()) {
-			if (numEntries < board.length)
+		if (numEntries < n || newScore > board[numEntries - 1].getScore()) {
+			if (numEntries < n)
 				numEntries++; // overall number increases
 
 			int j = numEntries - 1;
@@ -39,15 +39,29 @@ public class ScoreBoard {
 		}
 	}
 
-	public void display(GameEntry gameEntry) {
-		System.out.println("Name: " + gameEntry.getName());
-		System.out.println("Score: " + gameEntry.getScore());
+	/**
+	 * Remove an entry
+	 * 
+	 * @param i
+	 */
+	public GameEntry remove(int i) {
+		if (i < 0 || i >= numEntries)
+			throw new IndexOutOfBoundsException("Invalid index " + i);
+
+		GameEntry temp = board[i]; // save the object to be removed
+
+		for (int j = i; j < numEntries - 1; j++) // count up from i (not down)
+			board[j] = board[j + 1]; // move one cell to the left.
+
+		board[numEntries - 1] = null; // null out the old last score
+		numEntries--;
+		return temp; // return the removed object.
 	}
 
 	public void displayDetails() {
 		for (GameEntry gameEntry : board) {
 			if (gameEntry != null) {
-				display(gameEntry);
+				System.out.println(gameEntry);
 				System.out.println("============================");
 			}
 		}
@@ -56,21 +70,26 @@ public class ScoreBoard {
 	public static void main(String[] args) {
 		ScoreBoard scoreBoard = new ScoreBoard(10);
 
+		scoreBoard.add(new GameEntry("Jack", 510));
 		scoreBoard.add(new GameEntry("Mike", 1105));
+		scoreBoard.add(new GameEntry("Rose", 590));
 		scoreBoard.add(new GameEntry("Rob", 750));
 		scoreBoard.add(new GameEntry("Paul", 720));
 		scoreBoard.add(new GameEntry("Anna", 660));
-		scoreBoard.add(new GameEntry("Rose", 590));
-		scoreBoard.add(new GameEntry("Jack", 510));
 
 		scoreBoard.displayDetails();
-		
+
 		System.out.println("========== Initial values ends =====");
-		
+
 		System.out.println("Insert Selva 800 Score");
 
 		scoreBoard.add(new GameEntry("Selva", 800));
 
 		scoreBoard.displayDetails();
+
+		System.out.println("Remove Anna");
+		scoreBoard.remove(4);
+		scoreBoard.displayDetails();
+
 	}
 }
