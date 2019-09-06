@@ -20,4 +20,16 @@ public interface BaseOperations<E> {
 	public void clear();
 
 	public int size();
+
+	default E get(E item) {
+		return item;
+	}
+	
+	default E get(int position) {
+		return null;
+	}
+	
+	default E get(String element) {
+		return null;
+	}
 }
