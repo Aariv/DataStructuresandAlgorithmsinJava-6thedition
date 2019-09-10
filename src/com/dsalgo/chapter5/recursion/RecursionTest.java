@@ -22,28 +22,25 @@
 /**
  * 
  */
-package com.dsalgo.chapter7.lists;
+package com.dsalgo.chapter5.recursion;
 
 /**
  * @author zentere
  *
  */
-public class ListTest {
+public class RecursionTest {
 
 	public static void main(String[] args) {
-		List<Integer> integerLists = new ArrayList<>();
-		integerLists.add(1, 12);
-		integerLists.add(2, 13);
+		System.out.println(factorial(5));
+	}
 
-		integerLists.add(3, 14);
-		integerLists.add(4, 16);
-		integerLists.add(5, 17);
-		
-
-		// Can't iterate integerLists
-		
-		// for (Integer integer : integerLists) {
-		// System.out.println(integer);
-		// }
+	public static int factorial(int n) throws IllegalArgumentException {
+		if (n < 0)
+			throw new IllegalArgumentException();
+		else if (n == 0)
+			return 1;
+		else {
+			return n * factorial(n - 1);
+		}
 	}
 }
