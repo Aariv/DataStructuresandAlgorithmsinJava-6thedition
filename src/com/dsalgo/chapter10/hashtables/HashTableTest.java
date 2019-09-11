@@ -21,7 +21,7 @@
 package com.dsalgo.chapter10.hashtables;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class HashTableTest {

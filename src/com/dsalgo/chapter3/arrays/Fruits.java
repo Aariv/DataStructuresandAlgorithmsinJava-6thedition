@@ -4,7 +4,7 @@
 package com.dsalgo.chapter3.arrays;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class Fruits {

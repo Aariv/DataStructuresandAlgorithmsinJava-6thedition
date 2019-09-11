@@ -25,7 +25,7 @@
 package com.dsalgo.chapter3.arrays.diamentional;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class TicTacToe {

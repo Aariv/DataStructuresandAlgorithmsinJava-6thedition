@@ -4,7 +4,7 @@
 package com.dsalgo.chapter2.inheritance;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class FibonacciProgression extends Progression {

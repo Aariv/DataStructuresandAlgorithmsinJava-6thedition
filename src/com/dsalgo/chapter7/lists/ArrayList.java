@@ -28,7 +28,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class ArrayList<E> implements List<E> {

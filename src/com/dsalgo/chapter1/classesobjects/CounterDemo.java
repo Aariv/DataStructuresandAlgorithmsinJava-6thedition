@@ -4,7 +4,7 @@
 package com.dsalgo.chapter1.classesobjects;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class CounterDemo {
@@ -48,7 +48,7 @@ public class CounterDemo {
 /**
  * Class are reference types in Java
  * 
- * @author zentere
+ * @author aariv
  *
  */
 class Counter {

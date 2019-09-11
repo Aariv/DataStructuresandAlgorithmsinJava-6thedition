@@ -4,7 +4,7 @@
 package com.dsalgo.chapter2;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class InheritanceTest {

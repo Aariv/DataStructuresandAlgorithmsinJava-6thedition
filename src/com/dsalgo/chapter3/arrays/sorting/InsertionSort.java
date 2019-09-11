@@ -27,7 +27,7 @@ package com.dsalgo.chapter3.arrays.sorting;
 import java.util.Arrays;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class InsertionSort {

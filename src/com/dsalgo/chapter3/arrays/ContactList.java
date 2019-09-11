@@ -6,7 +6,7 @@ package com.dsalgo.chapter3.arrays;
 import java.util.NoSuchElementException;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class ContactList implements BaseOperations<Contact> {

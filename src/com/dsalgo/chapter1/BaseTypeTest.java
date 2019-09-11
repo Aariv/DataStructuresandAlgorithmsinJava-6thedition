@@ -25,7 +25,7 @@
 package com.dsalgo.chapter1;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class BaseTypeTest {

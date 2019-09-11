@@ -25,7 +25,7 @@
 package com.dsalgo.chapter5.recursion;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class HelloWorld {

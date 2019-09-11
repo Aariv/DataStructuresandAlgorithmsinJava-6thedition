@@ -25,7 +25,7 @@
 package com.dsalgo.chapter3.arrays.random;
 
 /**
- * @author zentere
+ * @author aariv
  * 
  *         It is not complete solution. Aariv, you have to work it out.
  *

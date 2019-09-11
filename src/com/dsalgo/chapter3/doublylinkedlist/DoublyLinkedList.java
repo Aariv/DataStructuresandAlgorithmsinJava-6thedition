@@ -4,7 +4,7 @@
 package com.dsalgo.chapter3.doublylinkedlist;
 
 /**
- * @author zentere
+ * @author aariv
  * @param <E>
  *
  */

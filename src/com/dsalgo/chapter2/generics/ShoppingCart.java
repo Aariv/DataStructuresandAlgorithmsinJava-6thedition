@@ -6,7 +6,7 @@ package com.dsalgo.chapter2.generics;
 import com.dsalgo.chapter2.minheritance.Sellable;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class ShoppingCart<T extends Sellable> {

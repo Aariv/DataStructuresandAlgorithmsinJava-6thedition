@@ -6,7 +6,7 @@ package com.dsalgo.chapter10.maps;
 import java.util.Map.Entry;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public interface Map<K, V> {

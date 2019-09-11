@@ -4,7 +4,7 @@
 package com.dsalgo.chapter3.circlarlylinkedlist;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class CircularlyLinkedList<E> {

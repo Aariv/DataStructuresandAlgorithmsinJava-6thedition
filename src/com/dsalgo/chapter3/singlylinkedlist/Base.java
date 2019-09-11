@@ -25,7 +25,7 @@
 package com.dsalgo.chapter3.singlylinkedlist;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public interface Base<E> {

@@ -25,7 +25,7 @@
 package com.dsalgo.chapter7.lists;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class ListTest {

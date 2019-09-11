@@ -4,7 +4,7 @@
 package com.dsalgo.chapter6.stacks;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class StackLinkedListDemo {

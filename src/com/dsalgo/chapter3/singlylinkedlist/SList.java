@@ -27,7 +27,7 @@ package com.dsalgo.chapter3.singlylinkedlist;
 import com.dsalgo.chapter3.singlylinkedlist.SinglyLinkedList.Node;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class SList<E> implements Base<E> {

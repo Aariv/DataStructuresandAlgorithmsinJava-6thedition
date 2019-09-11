@@ -25,7 +25,7 @@
 package com.dsalgo.chapter2.interfaceexample;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public abstract class AbstractProgression {

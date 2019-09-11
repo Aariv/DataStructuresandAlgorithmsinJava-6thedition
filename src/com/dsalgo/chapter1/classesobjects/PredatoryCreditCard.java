@@ -4,7 +4,7 @@
 package com.dsalgo.chapter1.classesobjects;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class PredatoryCreditCard extends CreditCard {

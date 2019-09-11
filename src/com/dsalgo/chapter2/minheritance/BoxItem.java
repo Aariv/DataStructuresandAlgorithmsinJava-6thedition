@@ -4,7 +4,7 @@
 package com.dsalgo.chapter2.minheritance;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class BoxItem implements Sellable, Transportable {

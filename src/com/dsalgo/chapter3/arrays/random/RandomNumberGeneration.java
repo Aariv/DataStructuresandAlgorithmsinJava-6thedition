@@ -28,7 +28,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * @author zentere
+ * @author aariv
  * 
  *         next = (a * cur + b) % n;
  *

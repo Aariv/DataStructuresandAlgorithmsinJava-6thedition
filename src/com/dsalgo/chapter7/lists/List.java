@@ -23,7 +23,7 @@ package com.dsalgo.chapter7.lists;
 
 /**
  * 
- * @author zentere
+ * @author aariv
  *
  */
 public interface List<E> {

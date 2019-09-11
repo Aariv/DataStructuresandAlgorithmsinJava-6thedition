@@ -4,7 +4,7 @@
 package com.dsalgo.chapter4.analysis;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class TimeElapseExample {

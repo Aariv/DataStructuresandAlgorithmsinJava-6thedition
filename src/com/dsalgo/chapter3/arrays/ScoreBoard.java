@@ -4,7 +4,7 @@
 package com.dsalgo.chapter3.arrays;
 
 /**
- * @author zentere
+ * @author aariv
  * 
  *         Class for storing high scores in an array in nondecreasing order
  *

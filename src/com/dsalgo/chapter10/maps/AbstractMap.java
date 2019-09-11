@@ -24,7 +24,7 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public abstract class AbstractMap<K, V> implements Map<K, V> {

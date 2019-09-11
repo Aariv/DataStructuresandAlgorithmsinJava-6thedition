@@ -27,7 +27,7 @@ package com.dsalgo.chapter2.nestedclasses;
 import com.dsalgo.chapter2.minheritance.Sellable;
 
 /**
- * @author zentere
+ * @author aariv
  * 
  * <T extends superClassName>
  *

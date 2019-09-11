@@ -4,7 +4,7 @@
 package com.dsalgo.chapter2.nestedclasses;
 
 /**
- * @author zentere
+ * @author aariv
  *
  */
 public class NestedClassTest {
