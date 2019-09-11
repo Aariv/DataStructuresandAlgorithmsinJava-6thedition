@@ -90,6 +90,35 @@ public class SList<E> implements Base<E> {
 		return answer;
 	}
 
+	@Override
+	public E removeLast() {
+		if (isEmpty())
+			return null;
+		Node<E> secondLast = head;
+		while (secondLast.getNext().getNext() != null)
+			secondLast = secondLast.getNext();
+		secondLast.setNext(null);
+		size--;
+		E answer = secondLast.getElement();
+		return answer;
+	}
+
+	@Override
+	public E remove(int position) {
+		if (isEmpty())
+			return null;
+		if (position == 0)
+			removeFirst();
+		Node<E> current = head;
+		for (int i = 1; i < position; i++) {
+			current = current.getNext();
+		}
+		// found the element to remove
+		current.setNext(current.getNext().getNext());
+		size--;
+		return current.getElement();
+	}
+
 	public void displayList() {
 		Node<E> current = head;
 		while (current != null) {
@@ -103,6 +132,7 @@ public class SList<E> implements Base<E> {
 		str.addFirst("Ariv");
 		str.addFirst("Zakir");
 		str.addFirst("Vivek");
+		str.addFirst("Mani");
 
 		System.out.println("============= Display ======");
 
@@ -114,8 +144,22 @@ public class SList<E> implements Base<E> {
 
 		str.displayList();
 		System.out.print(" " + str.size());
-		
+
 		str.removeFirst();
+
+		System.out.println("============= Display ======");
+
+		str.displayList();
+		System.out.print(" " + str.size());
+
+		str.removeLast();
+
+		System.out.println("============= Display ======");
+
+		str.displayList();
+		System.out.print(" " + str.size());
+		
+		str.remove(1);
 
 		System.out.println("============= Display ======");
 

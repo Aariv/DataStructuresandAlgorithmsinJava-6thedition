@@ -42,4 +42,8 @@ public interface Base<E> {
 	public void addLast(E e);
 
 	public E removeFirst();
+
+	public E removeLast();
+
+	public E remove(int i);
 }
