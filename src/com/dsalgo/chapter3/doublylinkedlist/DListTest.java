@@ -50,10 +50,12 @@ public class DListTest {
 		
 		dListString.displayForward();
 		dListString.displayBackward();
+		
+		
 	}
 }
 
-class DoubleList<E> implements Base<E> {
+class DoubleList<E> implements Base<E>, Cloneable {
 
 	// instance variables
 	private Node<E> header;
@@ -94,16 +96,23 @@ class DoubleList<E> implements Base<E> {
 
 	@Override
 	public E last() {
+		/*
+		 * Last element is available at previous of Tail Node
+		 */
 		return trailer.getPrev().getElement();
 	}
 
 	@Override
 	public void addFirst(E e) {
+		// It should be added in between head and head's next node.
 		addBetween(header, e, header.getNext());
 	}
 	
 	@Override
 	public void addLast(E e) {
+		/*
+		 * This also should be added in between the tail and tail's previous node
+		 */
 		addBetween(trailer.getPrev(), e, trailer);
 	}
 
@@ -114,20 +123,42 @@ class DoubleList<E> implements Base<E> {
 	 * @param successor
 	 */
 	private void addBetween(Node<E> predecessor, E e, Node<E> successor) {
+		/*
+		 * Create new node with predecessor and successor
+		 */
 		Node<E> newest = new Node<>(predecessor, e, successor);
+		// set next 
 		predecessor.setNext(newest);
+		// set previous
 		successor.setPrev(newest);
 		size++;
 	}
 	
 	@Override
 	public E removeFirst() {
-		return null;
+		if(isEmpty())
+			return null;
+		return remove(header.getNext());
+	}
+
+	private E remove(Node<E> node) {
+		// Get previous node
+		Node<E> predecessor = node.getPrev();
+		// Get next node
+		Node<E> successor = node.getNext();
+		// previous node is head and make head's next to point to given node's next node
+		predecessor.setNext(successor);
+		// Given X node's previous node should be pointing to head node
+		successor.setPrev(predecessor);
+		size--; // element has no link so reduce by 1
+		return node.getElement(); // return the result
 	}
 
 	@Override
 	public E removeLast() {
-		return null;
+		if(isEmpty())
+			return null;
+		return remove(trailer.getPrev());
 	}
 
 	@Override
@@ -152,6 +183,19 @@ class DoubleList<E> implements Base<E> {
 		}
 		System.out.println();
 	}
+	
+//	@Override
+//	protected DoubleList<E> clone() throws CloneNotSupportedException {
+//		DoubleList<E> other = (DoubleList<E>) super.clone();
+//		if(size > 0) {
+//			other.header = new Node<>(null, header.getElement(), null);
+//			Node<E> walk = header.getNext();
+//			Node<E> otherTail = other.header;
+//			
+//		}
+//			
+//		//return super.clone();
+//	}
 }
 
 class Node<E> {
