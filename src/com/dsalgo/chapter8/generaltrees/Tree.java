@@ -22,19 +22,12 @@
 /**
  * 
  */
-package com.dsalgo.chapter3.excercises;
+package com.dsalgo.chapter8.generaltrees;
 
 /**
  * @author zentere
  *
  */
-public class Excercise2 {
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		
-	}
-
+public interface Tree<E> extends Iterable<E> {
+	
 }

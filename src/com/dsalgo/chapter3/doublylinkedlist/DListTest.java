@@ -153,6 +153,19 @@ class DoubleList<E> implements Base<E>, Cloneable {
 		size--; // element has no link so reduce by 1
 		return node.getElement(); // return the result
 	}
+	
+	private E remove(E e) {
+		Node<E> current = header;
+		
+		for(int i = 1; i < size; i++) {
+			if(current.getElement().equals(e)) {
+				break;
+			}
+			current = current.getNext();
+		}
+		remove(current);
+		return current.getElement();
+	}
 
 	@Override
 	public E removeLast() {

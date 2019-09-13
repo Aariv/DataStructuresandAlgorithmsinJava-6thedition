@@ -22,19 +22,12 @@
 /**
  * 
  */
-package com.dsalgo.chapter3.excercises;
+package com.dsalgo.chapter7.lists;
 
 /**
  * @author zentere
  *
  */
-public class Excercise2 {
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		
-	}
+public class PositionalListTest {
 
 }
