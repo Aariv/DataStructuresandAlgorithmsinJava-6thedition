@@ -50,7 +50,7 @@ public class MemoryTest {
 		Container container = new Container();
 		container.setInitials("C"); // This will create new String C in Heap memory and the initial variable will set reference to String 'C'
 		another(container, last);
-		System.out.print(container.getInitials()); // B -> The state of the value is changed before it set reference to initial2 object
+		System.out.print(container.getInitials()); // B -> The state of the value is changed before it set reference to initial2 object	
 	}
 
 	/*
