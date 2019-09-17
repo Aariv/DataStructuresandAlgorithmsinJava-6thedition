@@ -28,7 +28,7 @@ package com.dsalgo.chapter15.memory;
  * @author zentere
  *
  */
-public class Book {
+public class Book implements BookReadOnly {
 	private int id;
 
 	private String title;
@@ -44,9 +44,10 @@ public class Book {
 	}
 
 	// TODO it is mutable
-	/**
-	 * @return the price
+	/* (non-Javadoc)
+	 * @see com.dsalgo.chapter15.memory.BookReadOnly#getPrice()
 	 */
+	@Override
 	public Price getPrice() {
 		return price;
 	}
@@ -59,23 +60,26 @@ public class Book {
 		this.price = price;
 	}
 
-	/**
-	 * @return the id
+	/* (non-Javadoc)
+	 * @see com.dsalgo.chapter15.memory.BookReadOnly#getId()
 	 */
+	@Override
 	public int getId() {
 		return id;
 	}
 
-	/**
-	 * @return the title
+	/* (non-Javadoc)
+	 * @see com.dsalgo.chapter15.memory.BookReadOnly#getTitle()
 	 */
+	@Override
 	public String getTitle() {
 		return title;
 	}
 
-	/**
-	 * @return the author
+	/* (non-Javadoc)
+	 * @see com.dsalgo.chapter15.memory.BookReadOnly#getAuthor()
 	 */
+	@Override
 	public String getAuthor() {
 		return author;
 	}

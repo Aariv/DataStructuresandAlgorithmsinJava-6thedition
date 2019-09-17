@@ -19,30 +19,29 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/**
- * 
- */
 package com.dsalgo.chapter15.memory;
 
-/**
- * @author zentere
- *
- */
-public class BookCatalogTest {
+public interface BookReadOnly {
+
+	// TODO it is mutable
+	/**
+	 * @return the price
+	 */
+	Price getPrice();
 
 	/**
-	 * @param args
+	 * @return the id
 	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	int getId();
 
-		BookCollection bc = new BookCollection();
-		bc.printAllBooks();
-		
-		System.out.println(bc.findBookByName("Book 1").getPrice().convert("EUR"));
-		
-		bc.printAllBooks();
-	}
+	/**
+	 * @return the title
+	 */
+	String getTitle();
+
+	/**
+	 * @return the author
+	 */
+	String getAuthor();
 
 }
-

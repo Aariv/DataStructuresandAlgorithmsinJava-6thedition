@@ -51,8 +51,9 @@ public class Price {
 			return value;
 		else {
 			Double converstion = rates.get("USD") / rates.get(toCurrency);
-			value = converstion * value;
-			return value;
+//			value = converstion * value;
+//			return value;
+			return converstion * value;
 		}
 	}
 
@@ -62,7 +63,8 @@ public class Price {
 	}
 
 	// TODO: Esacaping reference
-	public Map<String, Double> getRates() {
-		return rates;
+	public Double getRates(String currency) {
+		return rates.get(currency);
 	}
+	
 }

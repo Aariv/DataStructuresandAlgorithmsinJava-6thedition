@@ -48,8 +48,11 @@ public class BookCollection {
 		books.add(new Book(9, "Book 9", "Author 9", 4.99));
 	}
 
-	public Book findBookByName(String name) {
-		for (Book book : books) {
+	/*
+	 * ReadOnly Interface
+	 */
+	public BookReadOnly findBookByName(String name) {
+		for (BookReadOnly book : books) {
 			if (book.getTitle().equals(name))
 				return book;
 
@@ -58,7 +61,7 @@ public class BookCollection {
 	}
 
 	public void printAllBooks() {
-		for (Book book : books) {
+		for (BookReadOnly book : books) {
 			System.out.println(book.getTitle() + ":" + book.getPrice());
 		}
 	}
