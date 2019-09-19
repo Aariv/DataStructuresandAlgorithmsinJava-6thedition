@@ -30,12 +30,12 @@ import com.dsalgo.chapter7.positionlists.Position;
  * @author zentere
  *
  */
-public interface Tree<E> extends Iterable<E> {
-	Position<E> root();
+public interface BinaryTree<E> extends Tree<E> {
 
-	Position<E> parent(Position<E> p);
+	Position<E> left(Position<E> p);
 
-	Iterable<Position<E>> children(Position<E> p);
+	Position<E> right(Position<E> p);
 
-	int numChildren(Position<E> p);
+	Position<E> sibling(Position<E> p);
+
 }

@@ -22,20 +22,13 @@
 /**
  * 
  */
-package com.dsalgo.chapter8.generaltrees;
-
-import com.dsalgo.chapter7.positionlists.Position;
+package com.dsalgo.chapter7.positionlists;
 
 /**
  * @author zentere
  *
  */
-public interface Tree<E> extends Iterable<E> {
-	Position<E> root();
+public interface Position<E> {
 
-	Position<E> parent(Position<E> p);
-
-	Iterable<Position<E>> children(Position<E> p);
-
-	int numChildren(Position<E> p);
+	E getElement() throws IllegalStateException;
 }

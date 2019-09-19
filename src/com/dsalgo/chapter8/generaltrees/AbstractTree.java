@@ -24,18 +24,39 @@
  */
 package com.dsalgo.chapter8.generaltrees;
 
+import java.util.Iterator;
+
 import com.dsalgo.chapter7.positionlists.Position;
 
 /**
  * @author zentere
  *
  */
-public interface Tree<E> extends Iterable<E> {
-	Position<E> root();
+public abstract class AbstractTree<E> implements Tree<E> {
 
-	Position<E> parent(Position<E> p);
+	@Override
+	public Iterator<E> iterator() {
+		return null;
+	}
 
-	Iterable<Position<E>> children(Position<E> p);
+	@Override
+	public Position<E> root() {
+		return null;
+	}
 
-	int numChildren(Position<E> p);
+	@Override
+	public Position<E> parent(Position<E> p) {
+		return null;
+	}
+
+	@Override
+	public Iterable<Position<E>> children(Position<E> p) {
+		return null;
+	}
+
+	@Override
+	public int numChildren(Position<E> p) {
+		return 0;
+	}
+
 }

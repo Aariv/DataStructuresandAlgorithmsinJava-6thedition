@@ -22,20 +22,28 @@
 /**
  * 
  */
-package com.dsalgo.chapter8.generaltrees;
-
-import com.dsalgo.chapter7.positionlists.Position;
+package com.dsalgo.chapter7.positionlists;
 
 /**
  * @author zentere
  *
  */
-public interface Tree<E> extends Iterable<E> {
-	Position<E> root();
+public interface PositionalList<E> {
 
-	Position<E> parent(Position<E> p);
+	int size();
 
-	Iterable<Position<E>> children(Position<E> p);
+	boolean isEmpty();
 
-	int numChildren(Position<E> p);
+	Position<E> first();
+
+	Position<E> last();
+
+	Position<E> before(Position<E> p);
+
+	Position<E> after(Position<E> p);
+
+	Position<E> addFirst(E e);
+
+	Position<E> addLast(E e);
+
 }
