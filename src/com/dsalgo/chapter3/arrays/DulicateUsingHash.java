@@ -28,27 +28,14 @@ package com.dsalgo.chapter3.arrays;
  * @author zentere
  *
  */
-public class CountOccurance {
+public class DulicateUsingHash {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int A[] = { 3, 6, 8, 8, 10, 12, 15, 15, 20 };
+		// TODO Auto-generated method stub
 
-		int n = 9;
-		/*
-		 * O(n) is the time complexity
-		 */
-		for (int i = 0; i < n - 1; i++) {
-			if (A[i] == A[i + 1]) {
-				int j = i + 1;
-				while (A[j] == A[i])
-					j++;
-				System.out.println(A[i] + " appearing " + (j - i) + " times");
-				i = j -1;
-			}
-		}
 	}
 
 }

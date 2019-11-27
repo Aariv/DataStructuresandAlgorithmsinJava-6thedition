@@ -28,25 +28,22 @@ package com.dsalgo.chapter3.arrays;
  * @author zentere
  *
  */
-public class CountOccurance {
+public class MissingElement {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int A[] = { 3, 6, 8, 8, 10, 12, 15, 15, 20 };
-
-		int n = 9;
-		/*
-		 * O(n) is the time complexity
-		 */
-		for (int i = 0; i < n - 1; i++) {
-			if (A[i] == A[i + 1]) {
-				int j = i + 1;
-				while (A[j] == A[i])
-					j++;
-				System.out.println(A[i] + " appearing " + (j - i) + " times");
-				i = j -1;
+		int A[] = { 2, 3, 5, 8, 10 };
+		
+		int B[] = new int[11];
+		
+		for(int i = 0; i < A.length; i++) {
+			B[A[i]]++;
+		}
+		for(int i = 1; i < B.length; i++) {
+			if(B[i] <= 0) {
+				System.out.print(i + " ");
 			}
 		}
 	}

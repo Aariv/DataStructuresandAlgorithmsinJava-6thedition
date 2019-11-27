@@ -40,7 +40,9 @@ public class FindDublicate {
 		int n = 9;
 
 		int lastDublicate = 0;
-
+		/*
+		 * O(n) is the time complexity
+		 */
 		// scan through all elements
 		for (int i = 0; i < n - 1; i++) {
 			if (A[i] == A[i + 1] && A[i] != lastDublicate) {
