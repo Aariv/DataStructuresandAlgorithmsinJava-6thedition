@@ -28,14 +28,13 @@ package com.dsalgo.chapter3.arrays;
  * @author zentere
  *
  */
-public class DulicateUsingHash {
+public class FindDublicateUsingHash {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
 	}
 
 }
