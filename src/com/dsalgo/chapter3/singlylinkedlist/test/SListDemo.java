@@ -45,22 +45,116 @@ public class SListDemo {
 		ll.display();
 		ll.add(95, 5);
 		ll.display();
-		
-		// merge 
+
+		// merge
 		LinkedList sl1 = new LinkedList();
-		sl1.addAtEnd(10);sl1.addAtEnd(20);sl1.addAtEnd(30);sl1.addAtEnd(40);
-		
+		sl1.addAtEnd(10);
+		sl1.addAtEnd(20);
+		sl1.addAtEnd(30);
+		sl1.addAtEnd(40);
+
 		LinkedList sl2 = new LinkedList();
-		sl2.addAtEnd(50);sl2.addAtEnd(60);sl2.addAtEnd(70);sl2.addAtEnd(80);
-		
+		sl2.addAtEnd(50);
+		sl2.addAtEnd(60);
+		sl2.addAtEnd(70);
+		sl2.addAtEnd(80);
+
 		sl1.mergeList(sl1.head, sl2.head);
 		sl1.display();
+
+		ll.deleteAtHead();
+		ll.display();
+		ll.deleteAtEnd();
+		ll.display();
+		ll.delete(2);
+		ll.display();
+		ll.reverse();
+		ll.display();
+		ll.displayReverse();
+		ll.display();
 	}
 }
 
 class LinkedList {
 	ListNode head;
 	int size;
+	
+	public void displayReverse() {
+		reverseVisit(head);
+		System.out.println();
+	}
+	
+	private void reverseVisit(ListNode head2) {
+		if(head2 ==null)
+			return;
+		else {
+			reverseVisit(head2.next);
+			System.out.print(head2.val + "=>");
+		}
+		
+	}
+
+	public void reverse() {
+		ListNode current = head;
+		ListNode p = null;
+		ListNode r = null;
+		
+		while(current != null) {
+			r = p;
+			p = current;
+			current = current.next;
+			
+			p.next = r;
+		}
+		head = p;
+	}
+
+	public void deleteList() {
+		head = null;
+	}
+
+	public void delete(int position) {
+		if (head == null) {
+			System.out.println("List is empty");
+			return;
+		}
+		if (position > size) {
+			System.out.println("Out of index. Position can't find in this list");
+			return;
+		}
+		ListNode current = head;
+		ListNode prev = null;
+		for (int i = 1; i < position; i++) {
+			prev = current;
+			current = current.next;
+		}
+		prev.next = current.next;
+		size--;
+	}
+
+	public void deleteAtEnd() {
+		if (head == null) {
+			System.out.println("List is empty");
+			return;
+		}
+		ListNode current = head;
+		ListNode prev = null;
+		while (current.next != null) {
+			prev = current;
+			current = current.next;
+		}
+		prev.next = null;
+		size--;
+	}
+
+	public void deleteAtHead() {
+		if (head == null) {
+			System.out.println("List is empty..");
+			return;
+		}
+		head = head.next;
+		size--;
+	}
 
 	public void mergeList(ListNode l1, ListNode l2) {
 		if (l1 != null && l2 != null) {
