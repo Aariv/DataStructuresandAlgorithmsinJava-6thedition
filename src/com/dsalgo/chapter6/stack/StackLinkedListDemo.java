@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.dsalgo.chapter6.stacks;
+package com.dsalgo.chapter6.stack;
 
 /**
  * @author aariv
